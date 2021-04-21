@@ -25,9 +25,8 @@ class SecurityController extends AbstractController
             'error'         => $error,
         ));
     }
-
-    
     /**
+     * @codeCoverageIgnore
      * @Route("/login_check", name="login_check")
      */
     public function loginCheckAction()
@@ -36,6 +35,7 @@ class SecurityController extends AbstractController
     }
 
     /**
+    * @codeCoverageIgnore
     * @Route("/logout", name="logout")
     */
     public function logoutCheck()

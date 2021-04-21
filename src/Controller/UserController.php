@@ -44,16 +44,17 @@ class UserController extends AbstractController
 
             return $this->redirectToRoute('user_list');
         }
-
+        
         return $this->render('user/create.html.twig', ['form' => $form->createView()]);
     }
 
     /**
      * @Route("/users/{id}/edit", name="user_edit")
      */
-    public function editAction(Request $request, UserPasswordEncoderInterface $userPasswordEncoderInterface)
+    public function editAction($id, Request $request, UserPasswordEncoderInterface $userPasswordEncoderInterface)
     {
-        $user= $this->getUser();
+        $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository(User::class)->find($id);
 
         $form = $this->createForm(UserType::class, $user);
 
