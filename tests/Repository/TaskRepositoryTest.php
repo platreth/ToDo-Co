@@ -32,7 +32,7 @@ class TaskRepositoryTest extends KernelTestCase
         self::assertSame('Titre de la tâche', $task->getTitle());
         self::assertSame('Description de la tâche', $task->getContent());
         self::assertSame('zaams', $task->getAuthor()->getUsername());
-        self::assertSame(1, $task->getIsDone());
+        self::assertSame(true, $task->getIsDone());
     }
 
     public function tearDown(): void

@@ -66,6 +66,7 @@ class TaskControllerTest extends AbstractControllerTest
 
     public function testEdit(): void
     {
+        $task = $this->taskRepository->findOneBy(['title' => 'Titre de la tâche 2']);
         $this->client->request('GET', '/tasks/2/edit');
         self::assertEquals(302, $this->client->getResponse()->getStatusCode());
 
