@@ -12,4 +12,10 @@ Installez les dependances :
 Mettre en place la BDD :
 
     php bin/console doctrine:database:create
-    php bin/console doctrine:migrations:migrate
+    php bin/console d:s:u -f
+    
+Installez les fixtures : 
+    
+    php bin/console d:f:l -n
+    
+ 
