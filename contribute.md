@@ -19,7 +19,7 @@ décrire les étapes pour reproduire le bug
 #### Étape 2 :
 
 - Sur Github il faudra fork le projet TodoList puis le cloner localement sur votre machine :
-    - git clone https://github.com/USERNAME/TodoList.git
+    - git clone https://github.com/platreth/ToDo-Co.git
 
 - Créez votre branche : 
     - git branch nom_branche
